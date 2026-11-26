@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Helpdesk &amp; Circular Portal</title>
+  <style>
+    :root { --navy:#1f3a5f; --accent:#e8a317; --bg:#f4f6fa; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, sans-serif; background:var(--bg); color:#222; }
+    header { background:var(--navy); color:#fff; padding:18px 24px; }
+    header h1 { margin:0; font-size:1.6rem; }
+    nav { background:#16294a; display:flex; flex-wrap:wrap; }
+    nav a { color:#fff; padding:12px 18px; text-decoration:none; }
+    nav a:hover, nav a:focus { background:var(--accent); color:#000; }
+    main { max-width:1000px; margin:auto; padding:20px; }
+    section { margin-bottom:28px; }
+    h2 { border-left:5px solid var(--accent); padding-left:10px; color:var(--navy); }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+    article { background:#fff; padding:14px; border-radius:8px; box-shadow:0 1px 4px #0002; }
+    article time { font-size:.8rem; color:#666; }
+    .new { background:var(--accent); font-size:.7rem; padding:2px 6px; border-radius:4px; }
+    img { max-width:100%; border-radius:6px; }
+    form { background:#fff; padding:18px; border-radius:8px; display:grid; gap:12px; }
+    label { font-weight:bold; display:block; margin-bottom:4px; }
+    input, select, textarea { width:100%; padding:8px; border:1px solid #aab; border-radius:4px; }
+    button { padding:9px 18px; border:0; border-radius:4px; cursor:pointer; }
+    button[type=submit] { background:var(--navy); color:#fff; }
+    footer { background:var(--navy); color:#fff; text-align:center; padding:14px; }
+    @media (max-width:600px) { header h1 { font-size:1.2rem; } nav a { flex:1 1 50%; text-align:center; } }
+  </style>
+</head>
+<body>
+  <header><h1>Malla Reddy University – Student Helpdesk &amp; Circular Portal</h1></header>
+  <nav>
+    <a href="#notices">Latest Notices</a><a href="#exams">Examination Updates</a>
+    <a href="#downloads">Downloads</a><a href="#contact">Contact Helpdesk</a>
+  </nav>
+  <main>
+    <section id="notices">
+      <h2>Latest Notices</h2>
+      <div class="cards">
+        <article><h3>Minor-2 Timetable Released <span class="new">NEW</span></h3>
+          <time datetime="2026-11-16">16 Nov 2026</time>
+          <p>The Minor-2 examination schedule is now available.</p><a href="#">Read circular</a></article>
+        <article><h3>Fee Payment Reminder</h3><time datetime="2026-11-10">10 Nov 2026</time>
+          <p>Last date for payment without fine is 25 November.</p><a href="#">Read circular</a></article>
+        <article><h3>Annual Tech Fest</h3><time datetime="2026-11-05">05 Nov 2026</time>
+          <p>Register for events at the student activity centre.</p><a href="#">Read circular</a></article>
+      </div>
+    </section>
+    <section id="exams">
+      <h2>Examination Updates</h2>
+      <article>
+        <img alt="University campus building" width="400" height="120"
+             src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='120'><rect width='400' height='120' fill='%23cfe0f5'/><rect x='60' y='40' width='280' height='70' fill='%231f3a5f'/><polygon points='50,40 200,8 350,40' fill='%23e8a317'/></svg>">
+        <p>Hall tickets will be issued three days before each examination.</p>
+      </article>
+    </section>
+    <section id="downloads">
+      <h2>Downloads</h2>
+      <ul>
+        <li><a href="#">Academic Calendar 2026-27 (PDF)</a></li>
+        <li><a href="#">Minor-2 Timetable (PDF)</a></li>
+        <li><a href="#">Re-evaluation Form (DOCX)</a></li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Contact Helpdesk</h2>
+      <form>
+        <div><label for="name">Student Name *</label><input id="name" type="text" required></div>
+        <div><label for="roll">Roll Number *</label><input id="roll" type="text" required></div>
+        <div><label for="email">Email *</label><input id="email" type="email" required></div>
+        <div><label for="cat">Category</label>
+          <select id="cat"><option>Academic</option><option>Examination</option><option>Fees</option></select></div>
+        <div><label for="msg">Message *</label><textarea id="msg" rows="4" required></textarea></div>
+        <div><button type="submit">Submit</button> <button type="reset">Reset</button></div>
+      </form>
+    </section>
+  </main>
+  <footer>&copy; 2026 Malla Reddy University | helpdesk@mru.edu.in</footer>
+</body>
+</html>
